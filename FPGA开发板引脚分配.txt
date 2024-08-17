@@ -1,0 +1,176 @@
+#EP1C3T144    Flash:EPCS1
+#-----------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------
+#时钟
+set_location_assignment PIN_16 -to clk
+#复位
+set_location_assignment PIN_17 -to rst
+
+#点阵的控制信号
+set_location_assignment PIN_128 -to col[0]
+set_location_assignment PIN_131 -to col[1]
+set_location_assignment PIN_129 -to col[2]
+set_location_assignment PIN_120 -to col[3]
+set_location_assignment PIN_123 -to col[4]
+set_location_assignment PIN_122 -to col[5]
+set_location_assignment PIN_132 -to col[6]
+set_location_assignment PIN_134 -to col[7]
+
+set_location_assignment PIN_114 -to row[0]
+set_location_assignment PIN_130 -to row[1]
+set_location_assignment PIN_119 -to row[2]
+set_location_assignment PIN_124 -to row[3]
+set_location_assignment PIN_139 -to row[4]
+set_location_assignment PIN_121 -to row[5]
+set_location_assignment PIN_133 -to row[6]
+set_location_assignment PIN_125 -to row[7]
+
+#数码管控制信号
+#数码管段码控制引脚
+set_location_assignment PIN_3 -to dataout[0]
+set_location_assignment PIN_143 -to dataout[1]
+set_location_assignment PIN_2  -to dataout[2]
+set_location_assignment PIN_7  -to dataout[3]
+set_location_assignment PIN_5 -to dataout[4]
+set_location_assignment PIN_1 -to dataout[5]
+set_location_assignment PIN_140 -to dataout[6]
+set_location_assignment PIN_4 -to dataout[7]
+
+#数码管位码控制引脚
+set_location_assignment PIN_6 -to en[0] 
+set_location_assignment PIN_144 -to en[1] 
+set_location_assignment PIN_142 -to en[2] 
+set_location_assignment PIN_141 -to en[3] 
+
+#矩阵键盘控制引脚(与电机共用引脚，详细见电路图，需要跳线帽设置)
+set_location_assignment PIN_40 -to row[0]
+set_location_assignment PIN_37 -to row[1]
+set_location_assignment PIN_39 -to col[0]
+set_location_assignment PIN_38 -to col[1]
+
+#串口收发控制引脚
+set_location_assignment PIN_59 -to txd
+set_location_assignment PIN_92 -to Rxd
+
+#AT93C46控制引脚-即SPI控制引脚
+set_location_assignment PIN_48 -to CSout
+set_location_assignment PIN_47 -to SKout
+set_location_assignment PIN_42 -to DIout
+set_location_assignment PIN_41 -to DOinout
+
+#单键控制引脚
+set_location_assignment PIN_33 -to key1
+set_location_assignment PIN_32 -to key2
+
+#led灯控制引脚
+set_location_assignment PIN_26 -to LedOut[0] 
+set_location_assignment PIN_11 -to LedOut[1]
+set_location_assignment PIN_10 -to LedOut[2]
+
+#拨码开关控制引脚
+set_location_assignment PIN_31 -to KeyIn[0]
+set_location_assignment PIN_28 -to KeyIn[1]
+set_location_assignment PIN_27 -to KeyIn[2]
+
+#LCD1602控制引脚(与LCD12864，TFT公用，详细请看电路图)
+set_location_assignment PIN_94 -to lcd_data[0]
+set_location_assignment PIN_85 -to lcd_data[1]
+set_location_assignment PIN_83 -to lcd_data[2]
+set_location_assignment PIN_79 -to lcd_data[3]
+set_location_assignment PIN_77 -to lcd_data[4]
+set_location_assignment PIN_75 -to lcd_data[5]
+set_location_assignment PIN_73 -to lcd_data[6]
+set_location_assignment PIN_72 -to lcd_data[7]
+
+set_location_assignment PIN_97 -to lcd_e
+set_location_assignment PIN_99 -to lcd_rw
+set_location_assignment PIN_100 -to lcd_rs
+
+#LCD12864控制引脚(与LCD1602和TFT公用，详细请看电路图)
+set_location_assignment PIN_94 -to Data[0]
+set_location_assignment PIN_85 -to Data[1]
+set_location_assignment PIN_83 -to Data[2]
+set_location_assignment PIN_79 -to Data[3]
+set_location_assignment PIN_77 -to Data[4]
+set_location_assignment PIN_75 -to Data[5]
+set_location_assignment PIN_73 -to Data[6]
+set_location_assignment PIN_72 -to Data[7]
+
+set_location_assignment PIN_97 -to EN
+set_location_assignment PIN_99 -to RW
+set_location_assignment PIN_100 -to RS
+set_location_assignment PIN_126 -to LCDRst说
+
+#TFT控制引脚(与LCD1602和LCD12864公用，详细请看电路图)
+set_location_assignment PIN_100 -to TFT_Data[0]
+set_location_assignment PIN_99 -to TFT_Data[1]
+set_location_assignment PIN_98 -to TFT_Data[2]
+set_location_assignment PIN_97 -to TFT_Data[3]
+set_location_assignment PIN_96 -to TFT_Data[4]
+set_location_assignment PIN_94 -to TFT_Data[5]
+set_location_assignment PIN_91 -to TFT_Data[6]
+set_location_assignment PIN_85 -to TFT_Data[7]
+set_location_assignment PIN_84 -to TFT_Data[8]
+set_location_assignment PIN_83 -to TFT_Data[9]
+set_location_assignment PIN_82 -to TFT_Data[10]
+set_location_assignment PIN_79 -to TFT_Data[11]
+set_location_assignment PIN_78 -to TFT_Data[12]
+set_location_assignment PIN_77 -to TFT_Data[13]
+set_location_assignment PIN_76 -to TFT_Data[14]
+set_location_assignment PIN_75 -to TFT_Data[15]
+
+
+set_location_assignment PIN_105 -to TFT_RS
+set_location_assignment PIN_104 -to TFT_WR
+set_location_assignment PIN_103 -to TFT_RD
+set_location_assignment PIN_106 -to TFT_CS
+set_location_assignment PIN_74 -to TFT_RST
+
+
+#红外控制引脚
+set_location_assignment PIN_35 -to Din
+
+#AT24C02控制引脚-即I2C控制引脚
+set_location_assignment PIN_58 -to scl
+set_location_assignment PIN_57 -to sda
+
+#DS1302-即实时时钟控制引脚(与ADC共用，需要跳线帽设置)
+set_location_assignment PIN_52 -to CE
+set_location_assignment PIN_56 -to Sclk
+set_location_assignment PIN_53 -to IO
+
+#DAC7512-即ADC控制引脚
+set_location_assignment PIN_49 -to sync_out
+set_location_assignment PIN_50 -to sclk_out
+set_location_assignment PIN_51 -to da_data_out
+
+#TLC549-即ADC控制引脚(与DS1302共用，需要跳线帽设置)
+set_location_assignment PIN_56 -to ad_cs_out
+set_location_assignment PIN_52 -to ad_clk_out
+set_location_assignment PIN_53 -to ad_data_in
+
+#蜂鸣器控制引脚
+set_location_assignment PIN_36 -to Bell
+#DS18B20-温度传感器控制引脚
+set_location_assignment PIN_34 -to DQ
+
+#第一路直流电机驱动信号(与矩阵键盘共用，详细见电路图，需要跳线帽设置)
+set_location_assignment PIN_39 -to DriveOut[0]
+set_location_assignment PIN_40 -to DriveOut[1]
+#第二路直流电机驱动信号(与矩阵键盘共用，详细见电路图，需要跳线帽设置)
+set_location_assignment PIN_37 -to DriveOut[2]
+set_location_assignment PIN_38 -to DriveOut[3]
+
+#VGA控制引脚
+set_location_assignment PIN_111 -to hsync
+set_location_assignment PIN_110 -to vsync
+
+set_location_assignment PIN_109 -to r
+set_location_assignment PIN_108 -to g
+set_location_assignment PIN_107 -to b
+
+#PS/2控制引脚
+set_location_assignment PIN_112 -to kbdata
+set_location_assignment PIN_113 -to kbclk
+#-----------------------------------------------------------------------------------------------------------------
+#-----------------------------------------------------------------------------------------------------------------
